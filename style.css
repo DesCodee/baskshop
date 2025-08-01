@@ -77,21 +77,16 @@ header nav a {
 }
 
 .card img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 8px;
     transition: transform 0.5s ease-in-out;
 }
 
 .card img:hover {
-    animation: smoothZoom 0.5s forwards;
+    transform: scale(1.1);
 }
 
-@keyframes smoothZoom {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
 
 .card h3 {
     font-size: 20px;
