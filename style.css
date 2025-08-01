@@ -194,3 +194,23 @@ div:hover{
 .element {
   animation: fadeIn 1s ease-in forwards;
 }
+div{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    background-color: aqua;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation-name: anim1;
+    animation-duration: 0,5s;
+    animation-iteration-count:infinite;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+div:hover{
+    animation-play-state: paused;
+}
