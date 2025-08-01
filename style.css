@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    
     font-family: 'Montserrat', 'Cal Sans', sans-serif;
 }
 header {
@@ -58,8 +57,9 @@ header nav a {
     text-align: center;
 }
 .card {
-    animation-name: fadeIn ease in;
-
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -70,24 +70,20 @@ header nav a {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-
-.card::hover {
-    animation-play-state: start;
-    animation-name: fadeIn ease in;
 }
-
+.card:hover {
+    animation-play-state: running;
+    animation-name: fadeIn;
+}
 .card img {
     width: 140px;
     height: 140px;
     margin-bottom: 8px;
     transition: transform 0.5s ease-in-out;
 }
-
 .card img:hover {
     transform: scale(1.1);
 }
-
-
 .card h3 {
     font-size: 20px;
     font-weight: 700;
@@ -120,16 +116,16 @@ main h1 {
     text-align: center;
     margin-top: 64px;
 }
-main h3{
+main h3 {
     font-size: 24px;
-    font-weight: 150px;
+    font-weight: 400;
     color:#000000;
     text-align: center;
     margin-top: 16px;
 }
 main h2 {
-    font-size:  24px;
-    font-weight: 150px;
+    font-size: 24px;
+    font-weight: 400;
     color: #000000;
     text-align: center;
 }
@@ -142,11 +138,10 @@ footer {
     text-align: center;
     color: #888;
     font-size: 16px;
-    
 }
 main img {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 16px;
     align-items: center;
 }
@@ -175,6 +170,9 @@ main img {
     text-align: center;
     margin-bottom: 32px;
 }
+
+/* Добавлен блок
+
 
 
 
