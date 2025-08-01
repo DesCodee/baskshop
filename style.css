@@ -81,10 +81,18 @@ header nav a {
 }
 
 .card img:hover {
-    transform: scale(1.1);
+    animation: smoothZoom 0.5s forwards;
 }
 
+@keyframes smoothZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
+
 .card h3 {
     font-size: 20px;
     font-weight: 700;
@@ -173,15 +181,5 @@ main img {
     margin-bottom: 32px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(auto);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(25px);
-  }
-}
 
 
