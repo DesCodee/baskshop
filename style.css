@@ -58,6 +58,8 @@ header nav a {
     text-align: center;
 }
 .card {
+    animation-name: fadeIn ease in;
+
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -68,11 +70,20 @@ header nav a {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+
+.card::hover {
+    animation-play-state: start;
+    animation-name: fadeIn ease in;
 }
+
 .card img {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
 }
 .card h3 {
     font-size: 20px;
@@ -162,55 +173,15 @@ main img {
     margin-bottom: 32px;
 }
 
-div {
-    width: auto;
-    height: auto;
-    margin: auto;
-    font-size: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation-name: fadeIn;
-    animation-duration: 2s;
-}
-div:hover{
-    animation-play-state: start;
-    animation-duration: 1s;
-}
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(auto);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(100px);
   }
 }
 
-.element {
-  animation: fadeIn 1s ease-in forwards;
-}
-div{
-    width: 200px;
-    height: 200px;
-    margin: 25px;
-    background-color: aqua;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    animation-name: anim1;
-    animation-duration: 0,5s;
-    animation-iteration-count:infinite;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-div:hover{
-    animation-play-state: paused;
-}
+
