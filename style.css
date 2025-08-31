@@ -87,16 +87,6 @@ header nav a {
     animation: smoothZoom 0.5s forwards;
     transform: scale(1.1);
 }
-
-@keyframes smoothZoom {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
-
 .card h3 {
     font-size: 20px;
     font-weight: 700;
