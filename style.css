@@ -1,31 +1,79 @@
 body {
     margin: 0;
     padding: 0;
+
     font-family: 'Montserrat', 'Cal Sans', sans-serif;
 }
-
 header {
-    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px 48px 0 48px;
+    background: none;
+    z-index: 2;
 }
-
+header h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 48px;
+    color: #111;
+    font-family: 'Cal Sans', sans-serif;
+}
+header nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 header nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    gap: 32px;
+}
+.column {
+    flex: 1 1 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
 }
-
+.column h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
 .card {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation-name: fadeIn ease in;
+
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
+    padding: 24px 16px 16px 16px;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 
-.card:hover {
-    animation-play-state: running;
-    animation-name: fadeIn;
+.card::hover {
+    animation-play-state: start;
+    animation-name: fadeIn ease in;
 }
 
 .card img {
@@ -36,37 +84,103 @@ header nav a {
 }
 
 .card img:hover {
+    animation: smoothZoom 0.5s forwards;
     transform: scale(1.1);
+}
+
+@keyframes smoothZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .card h3 {
     font-size: 20px;
     font-weight: 700;
+    margin: 0;
 }
-
+.card p {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 8px 0;
+}
+.card .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 8px;
+}
+main {
+    padding: 0 48px;
+    background-image: url('basket.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
 main h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
     text-align: center;
     margin-top: 64px;
 }
-
-main h3 {
+main h3{
     font-size: 24px;
-    font-weight: 400;
-    color: #000000;
+    font-weight: 150px;
+    color:#000000;
     text-align: center;
     margin-top: 16px;
 }
-
+main h2 {
+    font-size:  24px;
+    font-weight: 150px;
+    color: #000000;
+    text-align: center;
+}
+main p {
+    font-size: 22px;
+}
 footer {
+    font-family: "Cal Sans", sans-serif;   
+    margin-top: 48px;
     text-align: center;
     color: #888;
     font-size: 16px;
-}
 
+}
 main img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 16px;
     align-items: center;
+}
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+.images img {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.images h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.images p {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
     margin-bottom: 32px;
 }
